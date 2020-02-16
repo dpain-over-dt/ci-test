@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: add llvm
-      run: sudo app-apt-repository 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main'
+      run: sudo add-apt-repository 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main'
     - name: install clang-format
       run: sudo apt-get update && sudo apt-get install clang-format-9
     - name: check code style
