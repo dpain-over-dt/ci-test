@@ -9,9 +9,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    - name: add llvm
+      run: sudo app-apt-repository 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main'
     - name: install clang-format
-      run: sudo apt-get update && sudo apt-get install clang-format-6.0
+      run: sudo apt-get update && sudo apt-get install clang-format-9
     - name: check code style
-      run: git ls-files src/ | xargs clang-format -i && git diff --exit-code
+      run: git ls-files src/ | xargs clang-format-9 -i && git diff --exit-code
     - name: make
       run: make
