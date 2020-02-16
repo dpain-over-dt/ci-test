@@ -1,2 +1,1 @@
-![](https://github.com/dpain-over-dt/ci-test/workflows/.github/workflows/main.yml/badge.svg)
-
+![](https://github.com/dpain-over-dt/ci-test/workflows/C/C++%20CI/badge.svg)
